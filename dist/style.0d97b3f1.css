@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+:root {
+    --space-between: 10px;
+    --input-height: 48px;
+    --input-width: 300px;
+    --list-length: 72px;
+    --list-right-space: 24px;
+    --list-bottom-space: 12px;
+    --list-background-color: rgba(221, 221, 221, 0.5);
+    --logo-background-color: rgba(255, 255, 255, 0.7);
+}
+
+body {
+    background-image: url("004.cb7634b2.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.globalHeader {
+    margin-top: calc(3 * var(--input-height));
+    margin-bottom: var(--input-height);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: calc(-0.25 * var(--input-height))
+}
+
+.globalHeader .icon {
+    position: relative;
+    height: calc(0.5 * var(--input-height));
+    width: calc(0.5 * var(--input-height));
+    left: calc(0.12 * var(--input-width));
+    top: calc(0.08 * var(--input-height));
+}
+
+.globalHeader input {
+    border: none;
+    outline: none;
+    font-size: 15px;
+    height: var(--input-height);
+    width: var(--input-width);
+    padding-left: calc(0.15 * var(--input-width));
+    padding-right: calc(0.1 * var(--input-width));
+    border-radius: calc(0.5 * var(--input-height));
+}
+
+@media (min-width: 500px) {
+    body {
+        background-image: url("001.39ea4cbc.jpg");
+        background-size: 100%;
+    }
+    .globalHeader {
+        margin-top: calc(5 * var(--input-height));
+    }
+    .globalHeader .icon {
+        left: calc(0.15 * var(--input-width));
+    }
+    .globalHeader input {
+        padding-left: calc(0.18 * var(--input-width));
+        width: calc(var(--input-width) * 2);
+        font-size: 20px;
+    }
+}
+
+.globalMain {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(var(--list-right-space) * 2 + var(--list-length) * 3);
+}
+
+.globalMain > .siteList {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: calc(-1 * var(--list-right-space));
+}
+
+.siteList > li {
+    height: var(--list-length);
+    width: var(--list-length);
+    border-radius: calc(0.1 * var(--list-length));
+    /*background-color: transparent;*/
+    background-color: var(--list-background-color);
+    margin-right: var(--list-right-space);
+    margin-bottom: var(--list-bottom-space);
+    position: relative;
+}
+
+.siteList .menu .select {
+    height: calc(var(--list-length) + 0.8 * var(--list-bottom-space));
+    width: calc(var(--list-length) + 0.8 * var(--list-right-space));
+    background-color: white;
+    border-radius: 4.6%;
+    padding-top: calc(0.08 * calc(var(--list-length) + 0.8 * var(--list-bottom-space)));
+    padding-bottom: calc(0.08 * calc(var(--list-length) + 0.8 * var(--list-bottom-space)));
+    overflow: hidden;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.select > [class$=Button] {
+    height: calc(0.28 * (var(--list-length) + 0.8 * var(--list-bottom-space)));
+    border-radius: 10%;
+    background: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: calc(0.28 * (var(--list-length) + 0.8 * var(--list-bottom-space)));
+}
+
+.siteList .menu .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@media (min-width: 500px) {
+    .globalMain {
+        width: calc(5 * var(--list-length) + 4 * var(--list-right-space))
+    }
+    .siteList > li {
+        background-color: transparent;
+        margin-bottom: calc(var(--space-between) * 2);
+    }
+    .siteList > .last {
+        cursor: pointer;
+    }
+    .siteList > li:hover {
+        background-color: var(--list-background-color);
+    }
+    .select > [class$=Button]:hover {
+        background-color: var(--list-background-color);
+        cursor: pointer;
+    }
+    .siteList > li:not(.last) .icon {
+        display: none;
+    }
+    .siteList > li:hover a .icon {
+        display: block;
+    }
+    .siteList > li a .icon:hover {
+        background-color: var(--logo-background-color);
+        border-radius: 30%;
+    }
+
+}
+
+.siteList .site {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--space-between);
+}
+
+.site > .logo {
+    height: calc(0.5 * var(--list-length));
+    width: calc(0.5 * var(--list-length));
+    margin-bottom: calc(0.4 * var(--space-between));
+    border-radius: 50%;
+    background-color: var(--logo-background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+}
+
+.site > .text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: var(--list-length);
+    font-size: 16px;
+}
+
+.siteList .addButton {
+    margin-top: var(--space-between);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.siteList .addButton > .icon {
+    height: calc(var(--list-length) * 0.5);
+    width: calc(var(--list-length) * 0.5);
+    margin-bottom: calc(0.5 * var(--space-between));
+    background-color: var(--logo-background-color);
+    border-radius: 50%;
+}
+
+/*# sourceMappingURL=style.0d97b3f1.css.map */
