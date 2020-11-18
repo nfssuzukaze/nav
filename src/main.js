@@ -103,7 +103,6 @@ document.addEventListener('keypress', e => {
         }
     })
 })
-
 document.querySelector('html').style.height = window.innerHeight+'px'
-
+// console.log(document.querySelector('html').style.height)
 render()

@@ -38,7 +38,7 @@ img {
 
 body {
     padding-top: calc(3 * var(--input-height));
-    background: url("/004.e31a7553.jpg") no-repeat center bottom;
+    background: url("004.ecac6434.jpg") no-repeat center bottom;
     background-size: cover;
     /*background-image: url("./images/004.jpg");*/
     /*background-size: auto 100%;*/
@@ -76,7 +76,7 @@ body {
 @media (min-width: 500px) {
     body {
         /*background-size: cover;*/
-        background: url("/001.a278b704.jpg") no-repeat fixed center center;
+        background: url("001.fc698bd8.jpg") no-repeat fixed center center;
         background-size: cover;
         /*background-image: url("./images/001.jpg");*/
         /*background-size: 100%;*/
@@ -223,4 +223,4 @@ body {
     border-radius: 50%;
 }
 
-/*# sourceMappingURL=/style.e308ff8e.css.map */
+/*# sourceMappingURL=style.640ce840.css.map */
