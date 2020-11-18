@@ -37,6 +37,7 @@ img {
 }
 
 body {
+    padding-top: calc(3 * var(--input-height));
     background: url("./images/004.jpg") no-repeat fixed center bottom;
     background-size: cover;
     /*background-image: url("./images/004.jpg");*/
@@ -46,7 +47,6 @@ body {
 }
 
 .globalHeader {
-    margin-top: calc(3 * var(--input-height));
     margin-bottom: var(--input-height);
     display: flex;
     justify-content: center;
