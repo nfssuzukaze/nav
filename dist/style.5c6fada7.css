@@ -37,7 +37,7 @@ img {
 }
 
 body {
-    background: url("./images/004.jpg") no-repeat fixed center bottom;
+    background: url("004.ecac6434.jpg") no-repeat fixed center bottom;
     background-size: cover;
     /*background-image: url("./images/004.jpg");*/
     /*background-size: auto 100%;*/
@@ -76,7 +76,7 @@ body {
 @media (min-width: 500px) {
     body {
         /*background-size: cover;*/
-        background: url("./images/001.jpg") no-repeat fixed center center;
+        background: url("001.fc698bd8.jpg") no-repeat fixed center center;
         background-size: cover;
         /*background-image: url("./images/001.jpg");*/
         /*background-size: 100%;*/
@@ -222,3 +222,5 @@ body {
     background-color: var(--logo-background-color);
     border-radius: 50%;
 }
+
+/*# sourceMappingURL=style.5c6fada7.css.map */
